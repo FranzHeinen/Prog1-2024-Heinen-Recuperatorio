@@ -2,7 +2,7 @@ using AdministracionService;
 
 namespace AdministracionServiceTest
 {
-    public class Tests
+    public class LogicaTest
     {
         Logica logica;
         [SetUp]
@@ -85,9 +85,9 @@ namespace AdministracionServiceTest
             Viaje viaje1 = new Viaje();
             logica.AgregarViaje(1, DateTime.Now, 10, 100);
 
-            var list = logica.ViajesProgramados(DateTime.Today.Date, DateTime.Today.Date);
+            var list = logica.ViajesProgramados(DateTime.MinValue, DateTime.MaxValue);
 
-            Assert.That(list.Count, Is.EqualTo(1));
+            Assert.That(list.Count, Is.EqualTo(2));
         }
         [Test]
         public void ObtenerDescripcion()
