@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace AdministracionService
 {
-    internal class Pasajero
+    public abstract class Pasajero
     {
+        public int Dni { get; set; }
+        public int Edad { get; set; }
+        public string Nombre { get; set; }
+        public DateTime FechaNacimiento { get; set; }
+        public virtual string ObtenerDetalle()
+        {
+            return $"{Nombre}-{Edad}";
+        }
     }
 }

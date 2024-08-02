@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace AdministracionService
 {
-    internal class Viaje
+    public class Viaje
     {
+        public int Codigo { get; set; }
+        public int TrenViaje { get; set; }
+        public DateTime FechaHora { get; set; }
+        public int Demora { get; set; }
+        public List<Pasajero>PasajerosViajes { get; set; }  = new List<Pasajero>();
+        public double ImporteBoleto { get; set; }
+        public double TotalViaje { get; set; }
+        public void TotalViajes(double importe)
+        {
+            TotalViaje += ImporteBoleto;
+        }
     }
 }

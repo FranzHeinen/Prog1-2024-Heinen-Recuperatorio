@@ -6,7 +6,22 @@ using System.Threading.Tasks;
 
 namespace AdministracionService
 {
-    internal class PasajeroComun
+    public class PasajeroComun : Pasajero
     {
+        public double CalcularDescuentoPasajeroComun()
+        {
+            double descuento = 0;
+
+            if (Edad < 12)
+            {
+                descuento = 0.10;
+            }
+
+            return descuento;
+        }
+        public override string ObtenerDetalle()
+        {
+            return base.ObtenerDetalle();
+        }
     }
 }

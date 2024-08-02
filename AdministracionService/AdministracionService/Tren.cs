@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace AdministracionService
 {
-    internal class Tren
+    public class Tren
     {
+        public int Codigo { get; set; }
+        public string Nombre { get; set; }
+        public EnumCiudadInicio CiudadInicio { get; set; } 
+        public EnumCiudadFin CiudadFin { get; set; }
+        public int Capacidad { get; set; }
     }
 }
