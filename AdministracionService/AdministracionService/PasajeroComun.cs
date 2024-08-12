@@ -8,6 +8,7 @@ namespace AdministracionService
 {
     public class PasajeroComun : Pasajero
     {
+        //CORRECCION: ESTO DEBE SER UN METODO EN LA CLASE BASE QUE SE SOBREESCRIBQA
         public double CalcularDescuentoPasajeroComun()
         {
             double descuento = 0;

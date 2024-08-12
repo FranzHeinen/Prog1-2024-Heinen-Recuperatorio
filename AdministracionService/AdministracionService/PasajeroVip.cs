@@ -14,6 +14,7 @@ namespace AdministracionService
         {
             return base.ObtenerDetalle() + $"{CiudadesFavoritas[1]}";
         }
+        //CORRECCION: ESTO DEBE SER UN METODO EN LA CLASE BASE QUE SE SOBREESCRIBQA
         public double CalcularDescuentoPasajeroVip()
         {
             double descuento = 0;

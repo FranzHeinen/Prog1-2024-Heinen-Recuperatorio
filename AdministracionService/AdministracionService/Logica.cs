@@ -1,8 +1,10 @@
 ﻿namespace AdministracionService
 {
+    //CORRECCION: MAL IDENTADOS LOS ARCHIVOS.
     public class Logica
     {
         public List<Viaje>Viajes { get; set; } = new List<Viaje>();
+        //CORRECCIÓN: ESTA LISTA NO ES REQUERIDA ACA. ADEMAS NO SE INICIALIZAN PROPIEDADES ASI.
         public List<Pasajero>Pasajeros { get; set; } = new List<Pasajero>();
         public List<Tren> Trenes { get; set; } = new List<Tren>();
 
@@ -16,6 +18,8 @@
             viaje.ImporteBoleto = importe;
             Viajes.Add(viaje);
         }
+
+        //CORRECCION: MAL USADA LA SOBRECARGA DE METODOS
         public void AgregarPasajeroComun(PasajeroComun pasajeroComun)
         {
             Viaje viaje = new Viaje();
@@ -30,6 +34,7 @@
 
             Pasajeros.Add(pasajeroComun);
         }
+        //CORRECCION: MAL USADA LA SOBRECARGA DE METODOS
         public void AgregarPasajeroVip(PasajeroVip pasajeroVip)
         {
             Viaje viaje = new Viaje();
